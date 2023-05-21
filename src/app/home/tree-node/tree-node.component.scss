@@ -1,0 +1,31 @@
+.tree-item-outter {
+  display: flex;
+  flex-direction: column;
+
+  .menu-tree-item {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    color: #333;
+    cursor: pointer;
+
+    >.title {
+      margin-right: auto;
+    }
+
+    >.expand-btn {
+      cursor: pointer;
+    }
+  }
+
+  >.children {
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+    padding: .8rem 0;
+  }
+
+  >.children:last-child() {
+    padding: 0;
+  }
+}

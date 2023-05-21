@@ -1,0 +1,14 @@
+<div class="tree-item-outter" >
+  <div class="menu-tree-item" (click)="expand()">
+    <mat-icon *ngIf="!!icon">{{icon}}</mat-icon>
+    <span class="title" [style.marginLeft]="!icon ? '2.5rem' : 0">{{title}}</span>
+    <div class="expand-btn">
+      <mat-icon *ngIf="!!children && !expanded">expand_more</mat-icon>
+      <mat-icon *ngIf="expanded">expand_less</mat-icon>
+    </div>
+  </div>
+  
+  <div class="children" *ngIf="expanded" [style.display]="expanded ? 'flex' : 'none'">
+    <tree-node *ngFor="let menu of children" [title]="menu.title" [icon]="menu.icon" [children]="menu.children" [expanded]="menu.expanded" />
+  </div>
+</div>

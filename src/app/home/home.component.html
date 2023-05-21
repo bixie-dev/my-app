@@ -1,0 +1,31 @@
+<div class="header-outter">
+  <div class="header">
+    <div class="burger-btn" (click)="BurgerClick()" #burgerBtn>
+      <mat-icon>menu</mat-icon>
+    </div>
+    <div class="burger-menu" [style.left]="burgerMenuShow ? 0 : '-320px'" #burgerMenu>
+      <div class="logo-image-box">
+        <img src="../assets/images/logo-min.png" alt="logo-min" />
+      </div>
+      <div class="menu-tree">
+        <div class="menu-tree-item" *ngFor="let menu of menus">
+          <tree-node [title]="menu.title" [icon]="menu.icon" [children]="menu.children" [expanded]="menu.expanded" />
+        </div>
+      </div>
+    </div>
+    <a href="#" class="logo-box">
+      <img src="../assets/images/icm_logo.png" alt="icm-logo" />
+    </a>
+    <div class="user-box">
+      <div class="avatar">
+        <img src="../assets/images/avatar.png" alt="avatar" />
+      </div>
+      <div class="name">{{name}}</div>
+    </div>
+    <a href="#" class="log-out">
+      <mat-icon>logout</mat-icon>
+    </a>
+  </div>
+</div>
+
+<div class="background-image"></div>

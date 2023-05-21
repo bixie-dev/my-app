@@ -1,1 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+  box-sizing: border-box;
+}
+
+mat-icon {
+  min-width: 1.5rem;
+  min-height: 1.5rem;
+}
+
+body {
+  margin: 0;
+}
